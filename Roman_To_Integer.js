@@ -24,12 +24,14 @@ let map = new Map([
  * @param {string} s
  * @return {number}
  * iterate the string input in reverse
- 
- * - if current character represents a higher value than the preceding one,
- *   then minus the preceding one, and add the result to the sum;
- 
- * - if current character represents a smaller value than the preceding one,
+ *
+ * - if the current character represents a higher value than the preceding one,
+ *   then subtract the preceding one and add the result to the sum.
+ *
+ * - if the current character represents a smaller value than the preceding one,
  *   then just add the current value to the sum.
+ * 
+ * points: the use of map, comma operator, and ternary expression.
  */
 let romanToInt = function(s) {
     let sum = 0;

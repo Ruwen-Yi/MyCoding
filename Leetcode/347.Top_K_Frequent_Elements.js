@@ -19,8 +19,8 @@ Output: [1]
 var topKFrequent = function(nums, k) {
     // create a map: keys are integers in nums, values are their occurence
     let map = new Map();
-    nums.map(item =>{
-        return map.set(item, (map.get(item) || 0) + 1) 
+    nums.forEach(item =>{
+        map.set(item, (map.get(item) || 0) + 1) 
     });
 
     // transfer the map into a two dimensional array

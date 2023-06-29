@@ -35,7 +35,7 @@ initialize the allocation to 1, perform two iterations, and update the candy for
  * @return {number}
  */
 var candy = function(ratings) {
-    let allocation = Array.from({length:ratings.length},(_,item)=>1);
+    let allocation = Array(ratings.length).fill(1);
 
     for (let i = 0; i < ratings.length-1; i++) {
         if (ratings[i+1] > ratings[i]) {

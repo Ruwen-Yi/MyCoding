@@ -1,3 +1,16 @@
+/* 
+Source: https://www.c0d3.com/curriculum/js3?challenge=98
+
+should print out: 
+"jayZ"
+... 500 millieseconds later...
+"tupac2"
+...500 millieseconds later...
+"true"
+...500 millieseconds later...
+levellevellevel
+*/
+
 const a = {
     "jayZ": (key) => console.log(key),
     "tupac": (key) => console.log(key + 2),

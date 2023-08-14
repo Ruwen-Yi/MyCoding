@@ -14,8 +14,6 @@ function solution(arr) {
     return acc;
   },{})
 
-  // console.log(count);
-
   let duplicatedNum = [];
   for (let key in count) {
     if(count[key] > 1) duplicatedNum.push(+key);

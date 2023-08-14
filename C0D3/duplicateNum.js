@@ -6,6 +6,7 @@ Write a function that takes in an array of numbers, and returns a new array of a
 
 solution([1, 2, 2, 3, 1])  // should return [1, 2]
 solution([1, 1, 1, 1, 2, 3, 3])  // should return [3, 1]
+solution([-1, 2, -1, 3, 4, -2, 4])  // should return [-1, 4]
 */
 
 function solution(arr) {

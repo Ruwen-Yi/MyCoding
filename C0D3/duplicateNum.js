@@ -23,4 +23,5 @@ function solution(arr) {
 
   return duplicatedNum;
 }
-solution([1, 2, 2, 3, 1])
+
+module.exports = {solution};

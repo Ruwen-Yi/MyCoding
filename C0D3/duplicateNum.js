@@ -17,7 +17,7 @@ function solution(arr) {
 
   let duplicatedNum = [];
   for (let key in count) {
-    if(count[key] > 1) duplicatedNum.push(+key);
+    if(count[key] > 1) duplicatedNum.push(+key);  // if occurence more than one, add to array
   }
 
   return duplicatedNum;

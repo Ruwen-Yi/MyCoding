@@ -32,7 +32,7 @@ function solution(obj, sec) {
         if (index >= length) return;
 
         obj[keys[index]](keys[index]);
-        setTimeout(() => executeNext(index + 1), sec);
+        setTimeout(() => executeNext(index + 1), sec);      // in current func, schedule the the next call
     }
 
     executeNext(0);

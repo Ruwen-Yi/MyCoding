@@ -30,7 +30,7 @@ function solution(originObj, funcObj) {
 		if (key in originObj) newObj[key] = funcObj[key](originObj[key]);
 	}
 
-	return Object.assign({}, originObj, newObj);
+	return Object.assign({}, originObj, newObj);	// copy originObj overwritten by newObj
 }
 
 module.exports = { solution }

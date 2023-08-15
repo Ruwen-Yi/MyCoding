@@ -29,7 +29,7 @@ function solution(obj, sec) {
     if (!length) return;
 
     function executeNext(index) {
-        if (index >= length) return;
+        if (index >= length) return;    // stop when all methods are called
 
         obj[keys[index]](keys[index]);
         setTimeout(() => executeNext(index + 1), sec);      // in current func, schedule the the next call

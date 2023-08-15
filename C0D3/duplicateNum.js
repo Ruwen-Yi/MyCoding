@@ -11,7 +11,7 @@ solution([-1, 2, -1, 3, 4, -2, 4])  // should return [-1, 4]
 
 function solution(arr) {
   let count = arr.reduce((acc, item, index)=>{
-    acc[item] = (acc[item] || 0) + 1;
+    acc[item] = (acc[item] || 0) + 1;   // record the occurence of elements
     return acc;
   },{})
 

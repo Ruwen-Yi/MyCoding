@@ -11,11 +11,11 @@ function solution(arr, targetSum) {
     const set = new Set();
 
     for (let num of arr) {
-        let complement = targetSum - num;
+        let complement = targetSum - num;   // calculate the complement num we need
         
-        if (set.has(complement)) return true;
+        if (set.has(complement)) return true;   // check if the complement num is in the set
         
-        set.add(num);
+        set.add(num);   // store the current num in set for further verification.
     }
 
     return false;

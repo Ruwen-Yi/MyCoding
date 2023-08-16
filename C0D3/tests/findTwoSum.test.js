@@ -1,5 +1,4 @@
-const { solution } = require('../findTwoSum'); // 假设 solution 函数位于一个名为 solution.js 的文件中
-
+const { solution } = require('../findTwoSum');
 describe('solution function', () => {
     it('should return true if there are two numbers that add up to the target sum', () => {
         const result = solution([1, 2, 22, 333, 23], 25);

@@ -21,7 +21,8 @@ Object.prototype.map = function(callback){
     let resultArr = [];
     let i = 0;
 
-    for (let [key, value] of Object.entries(this)) {
+    // loop through the key-value pairs and apply the callback function on each pair
+    for (let [key, value] of Object.entries(this)) {    
         resultArr.push(callback(key,value,i++))
     }
 

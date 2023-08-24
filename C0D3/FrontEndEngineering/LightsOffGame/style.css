@@ -1,0 +1,10 @@
+.light {
+    background-color: #aaaaaa;
+    width: 3rem;
+    height: 3rem;
+    border: 0.1rem solid black;
+}
+
+.light-on {
+    background-color: #aaffaa;
+}

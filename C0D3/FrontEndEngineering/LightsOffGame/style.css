@@ -1,8 +1,3 @@
-/* flex layout can eliminate the gap between inline blocks */
-.light-container { 
-    display: grid;
-}
-
 .light {
     background-color: #aaaaaa;
     width: 3rem;

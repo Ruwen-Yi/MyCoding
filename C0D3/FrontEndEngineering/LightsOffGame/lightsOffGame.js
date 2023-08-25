@@ -5,18 +5,22 @@ gameStart.onclick = () => {
 
 
 /**
- * 
- * @param {number} size the size of the lightTable
+ * initialize the light table with provided size.
+ * the game starts with one light turned on. 
+ * when you click on it, it toggles (therefore turning off), 
+ * and its surrounding lights (up, down, left right) will also toggle. 
+ * the game ends when all the lights are turned off.
+ * @param {number} size the size of the lightTable.
  */
 function initializeGame(size){
     // hide game start button each time starting the game.
     gameStart.hidden = true;    
 
-    // create light table with size
+    // create light table with size.
     let lightTable = document.getElementsByClassName('light-table')[0];
     populateLightTable(size, lightTable);
 
-    // click to light on/off
+    // click to light on/off.
     lightTable.onclick = (e)=>{
         if (e.target.classList.contains('light-on')) {
             e.target.classList.toggle('light-on');
@@ -28,7 +32,11 @@ function initializeGame(size){
     };
 }
 
-
+/**
+ * populate the table with size*size cells.
+ * @param {number} size the size of the light table.
+ * @param {*} lightTable the table to be populated.
+ */
 function populateLightTable(size, lightTable){
     for (let i = 0; i < size; i++) {
         let row = lightTable.insertRow(i);
@@ -43,8 +51,8 @@ function populateLightTable(size, lightTable){
 }
 
 /**
- * toggle neighbor light of the lit that is clicked
- * @param {HTMLTableCellElement} lit (the lit being clicked)
+ * toggle neighbor light of the lit that is clicked.
+ * @param {HTMLTableCellElement} lit the lit being clicked.
  * @param {HTMLTableElement} lightTable 
  */
 function toggleNeighbors(lit, lightTable) {
@@ -59,7 +67,7 @@ function toggleNeighbors(lit, lightTable) {
 }
 
 /**
- * 
+ * turn the light at [rowIndex, cellIndex] on.
  * @param {number} rowIndex 
  * @param {number} cellIndex 
  * @param {HTMLTableElement} lightTable 
@@ -68,6 +76,12 @@ function toggleNeighborLight(rowIndex, cellIndex, lightTable){
     lightTable.rows[rowIndex].cells[cellIndex].classList.toggle('light-on');
 }
 
+/**
+ * if all light off, then game win and clean the game.
+ * ask user if they want to play again.
+ * @param {HTMLTableElement} lightTable 
+ * @returns 
+ */
 function checkGameWin(lightTable){
     let lightOn = document.getElementsByClassName('light-on');
 
@@ -82,7 +96,7 @@ function checkGameWin(lightTable){
 
 /**
  * 
- * @description clean the lightTable 
+ * clean the current lightTable. 
  * @param {HTMLTableElement} lightTable
  */
 function cleanCurrentGame(lightTable) {
